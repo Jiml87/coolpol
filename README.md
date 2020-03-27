@@ -1,2 +1,5 @@
-Coolpol
-laminat
+# Coolpol
+
+```
+npm install nodemon -g
+```
