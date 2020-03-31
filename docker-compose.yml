@@ -19,16 +19,17 @@ services:
     container_name: cool-web-app
     volumes:
       - ./server:/usr/src/app
+      - ./server/node_modules:/home/node/app/node_modules
     ports:
       - 8080:8080
     env_file:
       - .env
-    restart: always
-    command: "npm run start:dev"
+    restart: unless-stopped
+    command: "./Docker/wait-for.sh database:5432 -- npm run start:dev"
   nginx:
     image: nginx:1.17.9
     container_name: nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./server/Docker/nginx.conf:/etc/nginx/conf.d/nginx.conf
     ports:
       - 8989:8989

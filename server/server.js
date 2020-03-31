@@ -9,19 +9,17 @@ const host = '0.0.0.0'
 // приложение
 const app = express()
 app.get('/', (req, res) => {
-  res.send('Hello World 2')
+  res.send('Hello World')
 })
 
 app.listen(port, host)
 console.log(`running on http://${host}:${port}`)
 
-setTimeout(() => {
-  db
-    .authenticate()
-    .then(function () {
-      console.log('Connection has been established successfully. !!!!!!!!!!!!!!!!!!')
-    })
-    .catch(function (err) {
-      console.log('!!!!!!!!!!!!!!!!!!!!!!!  Unable to connect to the database: ', err)
-    })
-}, 8000)
+db
+  .authenticate()
+  .then(function () {
+    console.log('Connection has been established successfully. !!!!!!!!!!!!!!!!!!')
+  })
+  .catch(function (err) {
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!  Unable to connect to the database: ', err)
+  })
