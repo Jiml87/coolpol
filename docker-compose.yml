@@ -1,16 +1,6 @@
-version: '2.0'
+version: '3.7'
 services:
-  app:
-    build: ./server
-    container_name: cool-web-app
-    ports:
-      - 8080:8080
-    environment:
-      POSTGRES_HOST: db
-    restart: always
-    links: 
-      - db
-  db:
+  database:
     image: postgres:12.2
     container_name: database
     ports:
@@ -18,16 +8,28 @@ services:
     volumes:
       - ./pg_date:/var/lib/postgresql/data
     environment: 
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: coolpol_db
+      HOSTNAME: "${DB_HOST}"
+      POSTGRES_DB: "${DB_NAME}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_USER: "${DB_USER}"
       PGDATA: /var/lib/postgresql/data
     restart: always
+  app:
+    build: ./server
+    container_name: cool-web-app
+    volumes:
+      - ./server:/usr/src/app
+      - ./server/node_modules:/home/node/app/node_modules
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    restart: unless-stopped
+    command: "./Docker/wait-for.sh database:5432 -- npm run start:dev"
   nginx:
     image: nginx:1.17.9
     container_name: nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
-    links:
-      - app
+      - ./server/Docker/nginx.conf:/etc/nginx/conf.d/nginx.conf
     ports:
       - 8989:8989
