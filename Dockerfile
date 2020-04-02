@@ -11,4 +11,8 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "server.js"]
+
+COPY Docker/wait-for-it.sh /usr/wait-for-it.sh
+RUN chmod +x /usr/wait-for-it.sh
+
+CMD [ "node", "server/app.js"]

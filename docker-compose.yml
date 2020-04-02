@@ -15,21 +15,27 @@ services:
       PGDATA: /var/lib/postgresql/data
     restart: always
   app:
-    build: ./server
+    build: ./
     container_name: cool-web-app
     volumes:
-      - ./server:/usr/src/app
-      - ./server/node_modules:/home/node/app/node_modules
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+      # - ./node_modules:/usr/src/app/node_modules
     ports:
       - 8080:8080
     env_file:
       - .env
     restart: unless-stopped
-    command: "./Docker/wait-for.sh database:5432 -- npm run start:dev"
+    depends_on:
+      - database
+    command: "npm run start:dev"
+    # command: /bin/bash -c "/usr/wait-for-it.sh --timeout=0 database:5432 -- npm run start:dev"
   nginx:
     image: nginx:1.17.9
     container_name: nginx
     volumes:
-      - ./server/Docker/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./Docker/nginx.conf:/etc/nginx/conf.d/nginx.conf
     ports:
       - 8989:8989
+    depends_on:
+      - app
