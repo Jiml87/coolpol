@@ -1,0 +1,86 @@
+
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    background-color: blue;
+}
+.header {
+   // position: absolute;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0 0 0;
+}
+.logo {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+  }
+.head_nav_menu, .head_list_menu, .header.container, .header_flex {
+    display: flex;
+}
+.head_list_menu, .header.container, .header_flex, .head_nav_menu{
+    width: 100%;
+    justify-content: space-between;
+}
+.head_nav_menu {
+    width: 50%;
+}
+.head_list_menu, .add_to_cart{
+    margin: 0;
+    align-items: center;
+    padding: 0;
+}
+.main_nav_item, .main_nav_item_form {
+    display: inline-block;
+    padding: 12px 2px;
+}
+.main_nav_item :hover {
+    border-bottom: 3px solid  #fce38a;
+    color:  #fce38a;
+}
+.search_form:hover .search {
+    display: inline-block;
+}
+.header_flex{
+    margin: 0 auto;
+}
+.nav_item_link {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0;
+}
+.add_to_cart {
+    width: 18px;
+    height: 26px;
+    //background-image: url(../images/SHOPPING_CART.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid transparent;
+    background-position: center;
+}
+.search_form {
+    border-bottom: 3px solid transparent;
+}
+.search {
+    display: none;
+    font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+}
+.search_button {
+    width: 18px;
+    height: 41px;
+    background: none;
+    //background-image: url(../images/MAGNIFYING_GLASS.png);
+    border:none;
+    outline: none;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid transparent;
+    background-position: center;
+    padding: 12px 2px;
+}
