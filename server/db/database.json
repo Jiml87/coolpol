@@ -1,11 +1,20 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "multipleStatements": true,
+    "host": {
+      "ENV": "DB_HOST"
+    },
+    "username": {
+      "ENV": "DB_USER"
+    },
+    "password": {
+      "ENV": "DB_PASSWORD"
+    },
+    "database": {
+      "ENV": "DB_NAME"
+    }
   },
   "test": {
     "username": "root",

@@ -16,7 +16,7 @@
   },
   "standard": {
     "env": [
-      "jest"
+      "jest", "node"
     ]
   },
   "eslintConfig": {
