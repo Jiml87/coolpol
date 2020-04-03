@@ -15,13 +15,13 @@ app.get('/', (req, res) => {
 app.listen(port, host)
 console.log(`running on http://${host}:${port}`)
 
-setTimeout(() => {
-  db
-    .authenticate()
-    .then(function () {
-      console.log('Connection has been established successfully. !!!!!!!!!!!!!!!!!!')
-    })
-    .catch(function (err) {
-      console.log('!!!!!!!!!!!!!!!!!!!!!!!  Unable to connect to the database: ', err)
-    })
-}, 5000)
+// setTimeout(() => {
+//   db
+//     .authenticate()
+//     .then(function () {
+//       console.log('Connection has been established successfully. !!!!!!!!!!!!!!!!!!')
+//     })
+//     .catch(function (err) {
+//       console.log('!!!!!!!!!!!!!!!!!!!!!!!  Unable to connect to the database: ', err)
+//     })
+// }, 5000)
