@@ -14,13 +14,12 @@
     "front:test": "react-scripts test",
     "front:eject": "react-scripts eject",
     "sqlz": "sequelize",
-    "precommit": "lint-staged",
-    "eslint": "eslint src/ server/"
+    "eslint": "eslint server/ src/ --max-warnings=0"
   },
-  "lint-staged": {
-    "*.{js, jsx}": [
-      "node_modules/.bin/eslint --max-warnings=0"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint"
+    }
   },
   "standard": {
     "env": [

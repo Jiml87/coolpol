@@ -1,5 +1,5 @@
 const express = require('express')
-const log = require('pino')()
+// const log = require('pino')()
 const db = require('./db/database')
 const api = require('./routes')
 
@@ -10,8 +10,6 @@ const host = '0.0.0.0'
 
 // приложение
 const app = express()
-
-const a = 'gq'
 
 app.use('/api', api)
 
