@@ -18,8 +18,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm eslint"
+      "pre-commit": "npm run eslint"
     }
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "node_modules/.bin/eslint --max-warnings=0",
+      "npm run eslint --fix",
+      "git add"
+    ]
   },
   "standard": {
     "env": [
