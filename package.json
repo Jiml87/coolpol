@@ -14,6 +14,7 @@
     "front:test": "react-scripts test",
     "front:eject": "react-scripts eject",
     "sqlz": "sequelize",
+    "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/ server/"
   },
   "husky": {
