@@ -14,11 +14,12 @@
     "front:test": "react-scripts test",
     "front:eject": "react-scripts eject",
     "sqlz": "sequelize",
-    "eslint": "eslint server/ src/ --max-warnings=0"
+    "eslint": "eslint server/ src/"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "npm run eslint",
+      "pre-push": "npm run eslint  --max-warnings=0"
     }
   },
   "standard": {
@@ -70,7 +71,6 @@
     "babel-register": "^6.26.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.4",
-    "lint-staged": "^10.1.3",
     "standard": "^14.3.3"
   }
 }
