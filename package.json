@@ -24,9 +24,7 @@
   },
   "lint-staged": {
     "*.{js, jsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "npm run eslint --fix",
-      "git add"
+      "node_modules/.bin/eslint --max-warnings=0"
     ]
   },
   "standard": {
