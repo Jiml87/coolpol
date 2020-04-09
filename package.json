@@ -15,12 +15,7 @@
     "front:eject": "react-scripts eject",
     "sqlz": "sequelize",
     "precommit": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/ server/"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run eslint"
-    }
+    "eslint": "eslint src/ server/"
   },
   "lint-staged": {
     "*.{js, jsx}": [

@@ -11,7 +11,7 @@ const host = '0.0.0.0'
 // приложение
 const app = express()
 
-const a = 'g'
+const a = 'gq'
 
 app.use('/api', api)
 
