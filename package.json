@@ -13,7 +13,13 @@
     "front:build": "react-scripts build",
     "front:test": "react-scripts test",
     "front:eject": "react-scripts eject",
-    "sqlz": "sequelize"
+    "sqlz": "sequelize",
+    "eslint": "node_modules/.bin/eslint src/ server/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm eslint"
+    }
   },
   "standard": {
     "env": [
@@ -63,6 +69,7 @@
   "devDependencies": {
     "babel-register": "^6.26.0",
     "eslint": "^6.8.0",
+    "husky": "^4.2.4",
     "standard": "^14.3.3"
   }
 }

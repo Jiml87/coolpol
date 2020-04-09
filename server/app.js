@@ -11,6 +11,8 @@ const host = '0.0.0.0'
 // приложение
 const app = express()
 
+const a = ''
+
 app.use('/api', api)
 
 // app.get('/', (req, res) => {
