@@ -12,11 +12,13 @@
     "front:start": "react-scripts start",
     "front:build": "react-scripts build",
     "front:test": "react-scripts test",
-    "front:eject": "react-scripts eject"
+    "front:eject": "react-scripts eject",
+    "sqlz": "sequelize"
   },
   "standard": {
     "env": [
-      "jest", "node"
+      "jest",
+      "node"
     ]
   },
   "eslintConfig": {
@@ -34,6 +36,11 @@
       "last 1 safari version"
     ]
   },
+  "sequelize": {
+    "require": [
+      "babel-register"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -46,6 +53,7 @@
     "nodemon": "^2.0.2",
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
+    "pino": "^6.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -53,6 +61,7 @@
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
+    "babel-register": "^6.26.0",
     "eslint": "^6.8.0",
     "standard": "^14.3.3"
   }

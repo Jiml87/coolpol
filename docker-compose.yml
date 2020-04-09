@@ -16,11 +16,10 @@ services:
     restart: always
   app:
     build: ./
-    container_name: cool-web-app
+    container_name: app
     volumes:
       - ./:/usr/src/app
-      - /usr/src/app/node_modules
-      # - ./node_modules:/usr/src/app/node_modules
+      # - /usr/src/app/node_modules
     ports:
       - 8080:8080
     env_file:
@@ -28,13 +27,14 @@ services:
     restart: unless-stopped
     depends_on:
       - database
-    command: "npm run start:dev"
-    # command: /bin/bash -c "/usr/wait-for-it.sh --timeout=0 database:5432 -- npm run start:dev"
+    command: /bin/bash -c "/usr/src/app/Docker/wait-for-it.sh --timeout=0 database:5432 -- npx sequelize db:migrate 
+            && npm run start:dev"
   nginx:
     image: nginx:1.17.9
     container_name: nginx
     volumes:
       - ./Docker/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./build:/usr/src/app/
     ports:
       - 8989:8989
     depends_on:
