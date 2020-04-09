@@ -19,7 +19,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run eslint",
-      "pre-push": "npm run eslint  --max-warnings=0"
+      "pre-push": "npx eslint server/ src/ --max-warnings=0"
     }
   },
   "standard": {
