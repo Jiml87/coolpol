@@ -1,60 +1,83 @@
-
 .container {
     width: 100%;
-    max-width: 1210px;
+    max-width: 1440px;
     margin: 0 auto;
-    background-color: blue;
 }
 .header {
-   // position: absolute;
     background-color: transparent;
     width: 100%;
-    padding: 30px 0 0 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.header_top_row {
+    display: flex;
+    justify-content: space-between;
+    color:#404048;
+    background-color: #fff;
+}
+.top_row_center_block, .top_row_right_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top_row_right_block {    
+    padding: 9px 15px 0 65px;
+}
+.top_row_left_block {    
+    padding: 15px;
+}
+.top_row_center_block{
+    padding: 15px;
 }
 .logo {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    
     font-size: 30px;
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    
   }
 .head_nav_menu, .head_list_menu, .header.container, .header_flex {
     display: flex;
 }
-.head_list_menu, .header.container, .header_flex, .head_nav_menu{
+.header.container, .header_flex, .head_nav_menu{
     width: 100%;
     justify-content: space-between;
 }
 .head_nav_menu {
-    width: 50%;
+    font-size: 16px;
+    background-color: #404048;
+    margin: 0 auto; 
 }
-.head_list_menu, .add_to_cart{
-    margin: 0;
-    align-items: center;
+.head_list_menu {
+    width: 100%;
     padding: 0;
+    justify-content: space-around;
 }
 .main_nav_item, .main_nav_item_form {
     display: inline-block;
     padding: 12px 2px;
 }
 .main_nav_item :hover {
-    border-bottom: 3px solid  #fce38a;
-    color:  #fce38a;
+    color: #FCE3FD;
+    text-shadow: 1px 1px 16px;
+    transition: all 0.7s;
 }
-.search_form:hover .search {
-    display: inline-block;
+.item_sale {
+    padding: 12px 20px;
+    background-color: #ab171b;
+}
+.item_sale :hover {
+    transition: all 0.3s;
 }
 .header_flex{
     margin: 0 auto;
 }
 .nav_item_link {
     color: #fff;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 12px 0;
 }
 .add_to_cart {
     width: 18px;
@@ -65,12 +88,24 @@
     border-bottom: 3px solid transparent;
     background-position: center;
 }
-.search_form {
-    border-bottom: 3px solid transparent;
+.callback_block {
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.callback_span {
+    color: #ab171b;
 }
 .search {
-    display: none;
-    font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+    width: 270px;
+    height: 50px;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid #404048;
+    min-width: 300px;
+}
+.search:focus {
+    outline: none;
 }
 .search_button {
     width: 18px;
@@ -83,4 +118,10 @@
     border-bottom: 3px solid transparent;
     background-position: center;
     padding: 12px 2px;
+}
+.header_down_row {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9e9e9;
+    padding: 14px;
 }
