@@ -8,7 +8,9 @@ class Laminate extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>LAMINATE</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Laminate</span>
+      </div>
     );
   }
 }

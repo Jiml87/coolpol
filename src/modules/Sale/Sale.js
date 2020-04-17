@@ -8,7 +8,9 @@ class Sale extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>Sale</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Sale</span>
+      </div>
     );
   }
 }

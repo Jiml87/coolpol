@@ -8,7 +8,9 @@ class Advice extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>Advice</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Advice</span>
+      </div>
     );
   }
 }

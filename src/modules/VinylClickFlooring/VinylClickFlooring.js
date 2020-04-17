@@ -8,7 +8,9 @@ class VinylClickFlooring extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>VinylClickFlooring</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>VinylClickFlooring</span>
+      </div>
     );
   }
 }

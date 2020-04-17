@@ -8,7 +8,9 @@ class Home extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>HOME</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Home</span>
+      </div>
     );
   }
 }

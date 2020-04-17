@@ -8,7 +8,9 @@ class Admin extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>Admin</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Admin</span>
+      </div>
     );
   }
 }

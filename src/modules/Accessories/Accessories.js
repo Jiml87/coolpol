@@ -8,7 +8,9 @@ class Accessories extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>Accessories</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Accessories</span>
+      </div>
     );
   }
 }

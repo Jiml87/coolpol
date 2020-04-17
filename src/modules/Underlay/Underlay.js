@@ -8,7 +8,9 @@ class Underlay extends Component {
   };
   render() {
     return (
-      <span className={styles.span}>Underlay</span>
+      <div className={styles.wrapper}>
+        <span className={styles.span}>Underlay</span>
+      </div>
     );
   }
 }
