@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from './modules/Header/Header'
+import Router from './router'
 
 function App () {
   return (
     <>
       {/* <Test /> */}
-      <Header />
+      <Router />
     </>
   )
 }

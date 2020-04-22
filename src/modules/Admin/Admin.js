@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import styles from './Waterproof.module.scss';
+import styles from './Admin.module.scss';
 
 
-class Waterproof extends Component {
+class Admin extends Component {
   state = {
     data: []
   };
   render() {
     return (
       <div className={styles.wrapper}>
-        <span className={styles.span}>Waterproof</span>
+        <span className={styles.span}>Admin</span>
       </div>
     );
   }
 }
 
-export default Waterproof
+export default Admin
