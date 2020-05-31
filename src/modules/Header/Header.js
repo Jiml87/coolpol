@@ -14,7 +14,6 @@ class Header extends Component {
   render() {
   return (
     <header className={styles.header}>
-      {/* <div className={styles.container}> */}
       <div className={cx({
         container: true,
         header_top_row: true
@@ -34,7 +33,7 @@ class Header extends Component {
         </div>
         <div className={styles.top_row_right_block}>
           <Link to='/login' className={styles.login}>LOGIN</Link>
-          <Link to='/add-product' className={styles.add_to_cart}>Add</Link>
+          <Link to='/add-product' className={styles.add_to_cart}>BASKET</Link>
         </div>
       </div>
       <nav className={styles.head_nav_menu}>
@@ -92,7 +91,6 @@ class Header extends Component {
           </Link>
         </div>
       </div>
-      {/* </div> */}
     </header>
 
   )
