@@ -4,58 +4,63 @@
 	display: flex;
 
 	.filter_column {
-			min-width: 230px;
-			font-size: $fs*1.5;
-			font-weight: 700;
+    min-width: 230px;
+    font-size: $fs*1.5;
+    font-weight: 700;
 	}
 
 	.ul_product {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			list-style-type: none;
-			padding: 10px 32px 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 32px 0 10px;
 			
-			.li_product {
-					width: 352px;
-					font-size: $fs;
-					font-weight: 700;
-					border: solid 1px rgb(163, 162, 162);
-					padding: 5px;
-					box-sizing: border-box;
-					margin-bottom: 30px;
-					text-align: center;
+    .li_product {
+      width: 352px;
+      font-size: $fs;
+      font-weight: 700;
+      border: solid 1px rgb(163, 162, 162);
+      padding: 5px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      text-align: center;
 					
-					.product_link {
-							text-decoration: none;
-					}
+      .product_link {
+        text-decoration: none;
 
-					.product_details {
-							padding-top: 10px;
-					}
+        .product_img {
+          width: 340px;
+          height: 340px;
+        }
+      }
 
-					.add_to_bascet_product {
-							width: 100px;
-							height: 35px;
-							font-size: $fs;
-							line-height: $fs;
-							color: #fff;
-							background-color: $s-col;
-							opacity: 0.8;
-							transition: all 0.3s;
-							border: 0;
-							cursor: pointer;
-							margin-bottom: 40px;
+      .product_details {
+        padding-top: 10px;
+      }
 
-							&:hover {
-									opacity: 1;
-							} 
+      .add_to_bascet_product {
+        width: 100px;
+        height: 35px;
+        font-size: $fs;
+        line-height: $fs;
+        color: #fff;
+        background-color: $s-col;
+        opacity: 0.8;
+        transition: all 0.3s;
+        border: 0;
+        cursor: pointer;
+        margin-bottom: 40px;
 
-							&:focus {
-									outline: none;
-								}
-					}
-			}
+        &:hover {
+          opacity: 1;
+        } 
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
 	}
 }
 
